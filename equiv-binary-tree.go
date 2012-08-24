@@ -25,8 +25,8 @@ func Same(t1, t2 *tree.Tree) bool {
 	go Walk(t2, t2_chan)
 
 	for i := 0; i < 10; i++ {
-		t1_e := <-t1_chan;
-		t2_e := <-t2_chan;
+		t1_e := <-t1_chan
+		t2_e := <-t2_chan
 
 		if t1_e != t2_e {
 			return false

@@ -8,11 +8,11 @@ import (
 func Sqrt(x float64) float64 {
 	last_z, z := x, 1.0
 
-	for math.Abs(z - last_z) >= 1.0e-6 {
-		last_z, z = z, z - (z * z - x) / (2 * z);
+	for math.Abs(z-last_z) >= 1.0e-6 {
+		last_z, z = z, z-(z*z-x)/(2*z)
 	}
 
-	return z;
+	return z
 }
 
 func main() {
